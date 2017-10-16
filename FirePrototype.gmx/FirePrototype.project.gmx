@@ -14,6 +14,12 @@
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_fire</sprite>
+    <sprite>sprites\spr_SpikeTree2</sprite>
+    <sprite>sprites\spr_SpikeTree3</sprite>
+    <sprite>sprites\spr_Tent</sprite>
+    <sprite>sprites\spr_BentTree</sprite>
+    <sprite>sprites\spr_Campfire</sprite>
+    <sprite>sprites\spr_SpikeTree1</sprite>
     <sprite>sprites\spr_particles</sprite>
     <sprite>sprites\spr_tree1</sprite>
     <sprite>sprites\spr_fireDead</sprite>
@@ -32,7 +38,9 @@
     <sprite>sprites\spr_coldman</sprite>
     <sprite>sprites\spr_hungryman</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bg_UnevenGround</background>
+  </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\obj_fire</object>
