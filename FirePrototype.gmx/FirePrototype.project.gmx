@@ -40,6 +40,7 @@
   </sprites>
   <backgrounds name="background">
     <background>background\bg_UnevenGround</background>
+    <background>background\bg_2</background>
   </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
@@ -49,7 +50,15 @@
     <object>objects\obj_counter</object>
     <object>objects\env_sounds</object>
     <object>objects\obj_tree1_fg</object>
+    <object>objects\obj_SpikeTree1_fg</object>
+    <object>objects\obj_SpikeTree2_fg</object>
+    <object>objects\obj_SpikeTree3_fg</object>
+    <object>objects\ob_BentTree_fg</object>
     <object>objects\obj_tree1_bg</object>
+    <object>objects\obj_SpikeTree1_bg</object>
+    <object>objects\obj_SpikeTree2_bg</object>
+    <object>objects\obj_SpikeTree3_bg</object>
+    <object>objects\obj_BentTree_bg</object>
     <object>objects\obj_event1</object>
     <object>objects\obj_event2Boy</object>
     <object>objects\obj_event2Girl</object>
@@ -58,6 +67,8 @@
     <object>objects\obj_eventEnd</object>
     <object>objects\obj_event4Cold</object>
     <object>objects\obj_event4Hungry</object>
+    <object>objects\obj_campFire</object>
+    <object>objects\object24</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room1</room>

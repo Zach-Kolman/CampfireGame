@@ -33,7 +33,7 @@ instance_create(x,y,env_sounds);</code>
     <yoffset>0</yoffset>
   </makerSettings>
   <backgrounds>
-    <background visible="-1" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
+    <background visible="-1" foreground="0" name="bg_2" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -53,23 +53,22 @@ instance_create(x,y,env_sounds);</code>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_fire" x="640" y="512" name="inst_8C043E43" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_tree1_fg" x="1088" y="448" name="inst_C02C3AFB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_tree1_fg" x="992" y="384" name="inst_714C35F0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_tree1_fg" x="192" y="448" name="inst_96BA4F63" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_tree1_fg" x="288" y="384" name="inst_72442456" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_tree1_bg" x="736" y="224" name="inst_22A19EFA" locked="0" code="" scaleX="0.645454525947571" scaleY="0.694501042366028" colour="4294967295" rotation="0"/>
-    <instance objName="obj_tree1_bg" x="544" y="224" name="inst_2B621556" locked="0" code="" scaleX="0.645454525947571" scaleY="0.694501042366028" colour="4294967295" rotation="0"/>
-    <instance objName="obj_tree1_bg" x="640" y="256" name="inst_51D3C09A" locked="0" code="" scaleX="0.645454525947571" scaleY="0.694501042366028" colour="4294967295" rotation="0"/>
-    <instance objName="obj_tree1_fg" x="96" y="352" name="inst_187DDED8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_tree1_fg" x="1152" y="384" name="inst_A0DD604B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_tree1_bg" x="448" y="192" name="inst_FAC0CFC2" locked="0" code="" scaleX="0.645454525947571" scaleY="0.694501042366028" colour="4294967295" rotation="0"/>
-    <instance objName="obj_tree1_bg" x="320" y="192" name="inst_DB3BC373" locked="0" code="" scaleX="0.645454525947571" scaleY="0.694501042366028" colour="4294967295" rotation="0"/>
-    <instance objName="obj_tree1_bg" x="800" y="192" name="inst_8527E89A" locked="0" code="" scaleX="0.645454525947571" scaleY="0.694501042366028" colour="4294967295" rotation="0"/>
-    <instance objName="obj_tree1_bg" x="640" y="160" name="inst_54741BF8" locked="0" code="" scaleX="0.645454525947571" scaleY="0.694501042366028" colour="4294967295" rotation="0"/>
-    <instance objName="obj_tree1_bg" x="928" y="160" name="inst_0D7371D7" locked="0" code="" scaleX="0.645454525947571" scaleY="0.694501042366028" colour="4294967295" rotation="0"/>
-    <instance objName="obj_tree1_bg" x="1056" y="96" name="inst_DFAD2571" locked="0" code="" scaleX="0.645454525947571" scaleY="0.694501042366028" colour="4294967295" rotation="0"/>
-    <instance objName="obj_tree1_bg" x="128" y="128" name="inst_5938B5AD" locked="0" code="" scaleX="0.645454525947571" scaleY="0.694501042366028" colour="4294967295" rotation="0"/>
+    <instance objName="obj_fire" x="670" y="436" name="inst_8C043E43" locked="0" code="" scaleX="0.732240438461304" scaleY="0.740000009536743" colour="4294967295" rotation="0"/>
+    <instance objName="obj_campFire" x="655" y="518" name="inst_28A3666D" locked="0" code="" scaleX="0.419825077056885" scaleY="0.439999997615814" colour="4294967295" rotation="0"/>
+    <instance objName="obj_SpikeTree2_bg" x="160" y="288" name="inst_6E0B0C71" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="7"/>
+    <instance objName="obj_SpikeTree2_bg" x="1088" y="288" name="inst_CFC1D645" locked="0" code="" scaleX="1" scaleY="1.03999996185303" colour="4294967295" rotation="-8"/>
+    <instance objName="obj_SpikeTree1_bg" x="291" y="266" name="inst_5FA2635B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_SpikeTree1_bg" x="814" y="257" name="inst_BD549383" locked="0" code="" scaleX="0.796610176563263" scaleY="1.0422534942627" colour="4294967295" rotation="-6"/>
+    <instance objName="obj_SpikeTree3_bg" x="966" y="254" name="inst_27D00507" locked="0" code="" scaleX="1.04201686382294" scaleY="1.60000002384186" colour="4294967295" rotation="0"/>
+    <instance objName="obj_SpikeTree3_bg" x="416" y="237" name="inst_3F34242D" locked="0" code="" scaleX="-0.966386556625366" scaleY="1.53008592128754" colour="4294967295" rotation="0"/>
+    <instance objName="obj_SpikeTree3_fg" x="64" y="320" name="inst_7413E0F9" locked="0" code="" scaleX="2.98319315910339" scaleY="2.54857134819031" colour="4294967295" rotation="22"/>
+    <instance objName="obj_SpikeTree1_fg" x="1184" y="352" name="inst_35CFC14F" locked="0" code="" scaleX="2.66101694107056" scaleY="2.56741571426392" colour="4294967295" rotation="-16"/>
+    <instance objName="obj_SpikeTree3_bg" x="672" y="224" name="inst_293E7DE2" locked="0" code="" scaleX="0.596638679504395" scaleY="1.22285711765289" colour="4294967295" rotation="0"/>
+    <instance objName="obj_SpikeTree1_bg" x="855" y="262" name="inst_86E9C7F7" locked="0" code="" scaleX="1.32203388214111" scaleY="1.03089892864227" colour="4294967295" rotation="2"/>
+    <instance objName="obj_SpikeTree2_bg" x="352" y="288" name="inst_362C35B0" locked="0" code="" scaleX="1" scaleY="1.03999996185303" colour="4294967295" rotation="-8"/>
+    <instance objName="obj_fire" x="192" y="-160" name="inst_8533BBD4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_fire" x="544" y="-192" name="inst_48EBCDC2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_SpikeTree3_bg" x="512" y="192" name="inst_44A6AC25" locked="0" code="" scaleX="0.924369752407074" scaleY="1.4097421169281" colour="4294967295" rotation="18"/>
   </instances>
   <tiles/>
   <PhysicsWorld>-1</PhysicsWorld>
