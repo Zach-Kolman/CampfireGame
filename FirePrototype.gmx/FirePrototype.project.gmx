@@ -37,6 +37,10 @@
     <sprite>sprites\spr_memorial</sprite>
     <sprite>sprites\spr_coldman</sprite>
     <sprite>sprites\spr_hungryman</sprite>
+    <sprite>sprites\spr_TreeAnim</sprite>
+    <sprite>sprites\spr_TreeAnim2Rev</sprite>
+    <sprite>sprites\spr_TreeAnimLong</sprite>
+    <sprite>sprites\spr_TreeAnimRevLong</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_UnevenGround</background>
@@ -69,6 +73,14 @@
     <object>objects\obj_event4Hungry</object>
     <object>objects\obj_campFire</object>
     <object>objects\object24</object>
+    <object>objects\obj_TreeAnim</object>
+    <object>objects\obj_TreeAnimFG</object>
+    <object>objects\obj_TreeAnimLong</object>
+    <object>objects\obj_TreeAnimLongFG</object>
+    <object>objects\obj_TreeAnimLongRev</object>
+    <object>objects\obj_TreeAnimLongRevFG</object>
+    <object>objects\obj_TreeAnimRev</object>
+    <object>objects\obj_TreeAnimRevFG</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room1</room>
