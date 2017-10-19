@@ -28,7 +28,7 @@
             <string>///Properties
 surf = surface_create(room_width,room_height);
 surfScale = 1/8;
-fadeLevel = noone;
+fadeLevel = 255;
 </string>
           </argument>
         </arguments>

@@ -29,53 +29,7 @@
 image_speed = 0;
 alphaScale = 0;
 eventEnd = 0;
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>301</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_set_alarm</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>1800</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>eventEnd = 1;
+eventTimer = 0;
 </string>
           </argument>
         </arguments>
@@ -101,13 +55,9 @@ eventEnd = 0;
             <string>///Movement
 image_alpha = alphaScale;
 
-if alphaScale &lt; 1
+if alphaScale &lt; 1 &amp;&amp; alphaScale != 1 &amp;&amp; eventEnd != 1
 {
     alphaScale += 0.01;
-}
-else
-{
-    alphaScale = 1;
 }
 
 if alphaScale == 1 &amp;&amp; image_index != 4
@@ -118,9 +68,15 @@ if alphaScale == 1 &amp;&amp; image_index != 4
 if image_index == 4
 {
     image_speed = 0;
+    eventTimer++;
 }
 
-if eventEnd = 1
+if eventTimer &gt;= 300
+{
+    eventEnd = 1;
+}
+
+if eventEnd == 1
 {
     alphaScale -= 0.01;
     if alphaScale &lt;= 0
@@ -129,7 +85,8 @@ if eventEnd = 1
         obj_eventController.event3Tick = 0;
     }
 }
-
+show_debug_message(alphaScale);
+show_debug_message(eventTimer);
 </string>
           </argument>
         </arguments>

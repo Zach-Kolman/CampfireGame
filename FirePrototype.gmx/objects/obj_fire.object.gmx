@@ -140,32 +140,33 @@ instance_create(x,pr,obj_particles);
           <argument>
             <kind>1</kind>
             <string>///Create Particles
-pr = random_range(y-16,y-32);
+pr = random_range(y+64,y+48);
+px = random_range(x-32,x+32);
 
 if ((ending != 1) &amp;&amp; (ending != 2))
 {
     if keyboard_check_pressed(vk_space) 
     {
-        instance_create(x,pr,obj_particles);
-        instance_create(x,pr,obj_particles);
-        instance_create(x,pr,obj_particles);
-        instance_create(x,pr,obj_particles);
-        instance_create(x,pr,obj_particles);
-        instance_create(x,pr,obj_particles);
-        instance_create(x,pr,obj_particles);
-        instance_create(x,pr,obj_particles);
-        instance_create(x,pr,obj_particles);
-        instance_create(x,pr,obj_particles);
-        instance_create(x,pr,obj_particles);
-        instance_create(x,pr,obj_particles);
-        instance_create(x,pr,obj_particles);
-        instance_create(x,pr,obj_particles);
-        instance_create(x,pr,obj_particles);
-        instance_create(x,pr,obj_particles);
-        instance_create(x,pr,obj_particles);
-        instance_create(x,pr,obj_particles);
-        instance_create(x,pr,obj_particles);
-        instance_create(x,pr,obj_particles);
+        instance_create(px,pr,obj_particles);
+        instance_create(px,pr,obj_particles);
+        instance_create(px,pr,obj_particles);
+        instance_create(px,pr,obj_particles);
+        instance_create(px,pr,obj_particles);
+        instance_create(px,pr,obj_particles);
+        instance_create(px,pr,obj_particles);
+        instance_create(px,pr,obj_particles);
+        instance_create(px,pr,obj_particles);
+        instance_create(px,pr,obj_particles);
+        instance_create(px,pr,obj_particles);
+        instance_create(px,pr,obj_particles);
+        instance_create(px,pr,obj_particles);
+        instance_create(px,pr,obj_particles);
+        instance_create(px,pr,obj_particles);
+        instance_create(px,pr,obj_particles);
+        instance_create(px,pr,obj_particles);
+        instance_create(px,pr,obj_particles);
+        
+
     
         if (audio_is_playing(sfx_addFire))
         {
@@ -538,6 +539,7 @@ if (image_xscale &lt; maxScale &amp;&amp; image_xscale &gt; fireMed &amp;&amp; !
           <argument>
             <kind>1</kind>
             <string>///Camera
+/*
 if fireLevel &lt;=1
 {
     view_xview = 320;

@@ -49,8 +49,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>lightSize = 2;
-lightStrength = 1;
+            <string>lightSize = 10; // 2
+lightStrength = 3; // 1
 physics_apply_impulse(x,y,random_range(-1,1),random(-0.5));
 
 </string>

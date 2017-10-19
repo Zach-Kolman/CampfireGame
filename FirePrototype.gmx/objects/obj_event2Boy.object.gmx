@@ -109,10 +109,13 @@ else
 {
     alphaScale = 1;
 }
-if (eventEnd == 1) || (obj_event2Girl.eventEnd == 1)
+if instance_exists(obj_event2Girl)
 {
-    instance_destroy();
-    obj_eventController.event2Tick = 0;
+    if (eventEnd == 1) || (obj_event2Girl.eventEnd == 1)
+    {
+        instance_destroy();
+        obj_eventController.event2Tick = 0;
+    }
 }
 
 </string>
