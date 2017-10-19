@@ -11,6 +11,7 @@
     <sound>sound\sfx_fireLG</sound>
     <sound>sound\sfx_addFire</sound>
     <sound>sound\music_story1</sound>
+    <sound>sound\sfx_eventChime</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_fire</sprite>
@@ -72,7 +73,6 @@
     <object>objects\obj_event4Cold</object>
     <object>objects\obj_event4Hungry</object>
     <object>objects\obj_campFire</object>
-    <object>objects\object24</object>
     <object>objects\obj_TreeAnim</object>
     <object>objects\obj_TreeAnimRev</object>
   </objects>
