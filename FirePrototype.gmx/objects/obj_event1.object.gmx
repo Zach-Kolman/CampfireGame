@@ -27,6 +27,9 @@
             <kind>1</kind>
             <string>///Properties
 image_speed = 0.25;
+stop = 0;
+event1Tick2=0;
+eventEnd = 0;
 </string>
           </argument>
         </arguments>
@@ -50,7 +53,16 @@ image_speed = 0.25;
           <argument>
             <kind>1</kind>
             <string>///Movement
-x-=0.5;
+if (stop == 0) || (obj_fire.fireLevel != 4) || (eventEnd = 1)
+{
+sprite_index = spr_character;
+x-=0.75;
+
+}
+else
+{
+    x=x;
+}
 //show_debug_message(obj_event1.x);
 
 if x &lt;= -128
@@ -58,6 +70,34 @@ if x &lt;= -128
     instance_destroy();
     obj_eventController.event1Tick = 0;
 }
+
+if (x &lt;= 700 &amp;&amp; x &gt;=600) &amp;&amp; (event1Tick2 &lt; 300)
+{
+    
+    if (obj_fire.fireLevel == 4)
+    {
+    stop = 1;
+    sprite_index = spr_walkerStand;
+    event1Tick2++;
+    }
+}
+
+if (event1Tick2 &gt;= 300) &amp;&amp; (event1Tick2 &lt; 900) &amp;&amp; (obj_fire.fireLevel = 4)
+{
+    sprite_index = spr_walkerReach;
+    if image_index = 6
+    {
+        image_index = 2;
+    }
+    event1Tick2++;
+}
+
+
+if event1Tick2 &gt;= 900
+{
+    eventEnd = 1;
+}
+//show_debug_message(event1Tick2);
 </string>
           </argument>
         </arguments>

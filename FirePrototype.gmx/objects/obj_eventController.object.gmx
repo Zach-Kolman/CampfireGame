@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>///Properties and Variables
 event1Tick=0;
+event1Tick2=0;
 event2Tick=0;
 event2part2Tick=0;
 event3Tick=0;
@@ -68,9 +69,9 @@ if obj_fire.fireLevel != 3 &amp;&amp; event1Tick &gt; 0
     event1Tick--;
 }
 ////////////////////Event Start
-if event1Tick == 1000 &amp;&amp; !instance_exists(obj_event1)
+if event1Tick == 180 &amp;&amp; !instance_exists(obj_event1)
 {
-    instance_create(1300,448,obj_event1);
+    instance_create(1300,500,obj_event1);
 }
 
 ///////////////////////////////////////////////////////////////////Event 2 Sitters
@@ -84,7 +85,7 @@ if (obj_fire.fireLevel &lt; 4 || obj_fire.fireLevel &gt; 5) &amp;&amp; event2Tic
     event2Tick--;
 }
 ////////////////////Event Start
-if event2Tick == 1000 &amp;&amp; !instance_exists(obj_event2Boy)
+if event2Tick == 180 &amp;&amp; !instance_exists(obj_event2Boy)
 {
     instance_create(800,480,obj_event2Boy);
 }
@@ -100,7 +101,7 @@ if obj_fire.fireLevel != 2 &amp;&amp; event3Tick &gt; 0
     event3Tick--;
 }
 ////////////////////Event Start
-if event3Tick == 1000 &amp;&amp; !instance_exists(obj_event3Memorial)
+if event3Tick == 180 &amp;&amp; !instance_exists(obj_event3Memorial)
 {
     instance_create(864,448,obj_event3Memorial);
 }
@@ -116,7 +117,7 @@ if obj_fire.fireLevel != 1 &amp;&amp; event4Tick &gt; 0
     event4Tick--;
 }
 ////////////////////Event Start
-if event4Tick == 1000 &amp;&amp; !instance_exists(obj_event4Cold) &amp;&amp; !instance_exists(obj_event4Hungry) 
+if event4Tick == 180 &amp;&amp; !instance_exists(obj_event4Cold) &amp;&amp; !instance_exists(obj_event4Hungry) 
 {
     if event4ColdEnd == 0
     {
@@ -139,7 +140,7 @@ if event4Tick == 1000 &amp;&amp; !instance_exists(obj_event4Cold) &amp;&amp; !in
 /////////////////////////////////////////////////////////////////Ending Events
 if ((obj_fire.ending == 1) || (obj_fire.ending == 2))
 {
-    instance_create(x,y,obj_eventEnd);
+    instance_create(0,0,obj_eventEnd);
 }
 </string>
           </argument>
@@ -172,7 +173,7 @@ else
     event2part2Tick--;
 }
 
-if event2part2Tick == 500 &amp;&amp; !instance_exists(obj_event2Girl)
+if event2part2Tick == 180 &amp;&amp; !instance_exists(obj_event2Girl)
 {
     instance_create(448,480,obj_event2Girl);
 }
