@@ -83,6 +83,13 @@ with(obj_particles4)
     draw_set_blend_mode(bm_normal);
 }
 
+with(obj_glow)
+{
+    draw_set_blend_mode(bm_normal);
+    draw_sprite_ext(spr_glow,0,x*other.surfScale,y*other.surfScale,lightSize*other.surfScale,lightSize*other.surfScale,0,c_orange,lightStrength);
+    draw_set_blend_mode(bm_normal);
+}
+
 
 
 surface_reset_target();

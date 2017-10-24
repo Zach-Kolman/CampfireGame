@@ -52,6 +52,7 @@
       <sprite>sprites\spr_particles3</sprite>
       <sprite>sprites\spr_particles4</sprite>
     </sprites>
+    <sprite>sprites\spr_glow</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_UnevenGround</background>
@@ -64,6 +65,7 @@
     <object>objects\obj_particles2</object>
     <object>objects\obj_particles3</object>
     <object>objects\obj_particles4</object>
+    <object>objects\obj_glow</object>
     <object>objects\obj_lightcontrols</object>
     <object>objects\obj_counter</object>
     <object>objects\env_sounds</object>

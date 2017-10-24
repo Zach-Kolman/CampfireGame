@@ -133,6 +133,8 @@ else
 }
 if instance_exists(obj_event2Girl)
 {
+    x = obj_event2Girl.x + 100;
+    
     if (eventEnd == 1) || (obj_event2Girl.eventEnd == 1)
     {
         instance_destroy();
