@@ -87,11 +87,42 @@ cheatsActive = false;
             <string>if fireLevel &gt; 0
 {
 kindle -=1;
+}
+
+if fireLevel == 3
+{
 instance_create(x,pr,obj_particles);
 instance_create(x,pr,obj_particles);
 instance_create(x,pr,obj_particles);
 instance_create(x,pr,obj_particles);
 instance_create(x,pr,obj_particles);
+}
+
+if fireLevel == 5
+{
+instance_create(x,pr,obj_particles2);
+instance_create(x,pr,obj_particles2);
+instance_create(x,pr,obj_particles2);
+instance_create(x,pr,obj_particles2);
+instance_create(x,pr,obj_particles2);
+}
+
+if fireLevel == 4
+{
+instance_create(x,pr,obj_particles3);
+instance_create(x,pr,obj_particles3);
+instance_create(x,pr,obj_particles3);
+instance_create(x,pr,obj_particles3);
+instance_create(x,pr,obj_particles3);
+}
+
+if fireLevel == 6
+{
+instance_create(x,pr,obj_particles4);
+instance_create(x,pr,obj_particles4);
+instance_create(x,pr,obj_particles4);
+instance_create(x,pr,obj_particles4);
+instance_create(x,pr,obj_particles4);
 }
 </string>
           </argument>
@@ -147,27 +178,43 @@ if ((ending != 1) &amp;&amp; (ending != 2))
 {
     if keyboard_check_pressed(vk_space) 
     {
+        if fireLevel == 3
+        {
         instance_create(px,pr,obj_particles);
         instance_create(px,pr,obj_particles);
         instance_create(px,pr,obj_particles);
         instance_create(px,pr,obj_particles);
         instance_create(px,pr,obj_particles);
-        instance_create(px,pr,obj_particles);
-        instance_create(px,pr,obj_particles);
-        instance_create(px,pr,obj_particles);
-        instance_create(px,pr,obj_particles);
-        instance_create(px,pr,obj_particles);
-        instance_create(px,pr,obj_particles);
-        instance_create(px,pr,obj_particles);
-        instance_create(px,pr,obj_particles);
-        instance_create(px,pr,obj_particles);
-        instance_create(px,pr,obj_particles);
-        instance_create(px,pr,obj_particles);
-        instance_create(px,pr,obj_particles);
-        instance_create(px,pr,obj_particles);
+        }
         
-
-    
+        if fireLevel == 5
+        {
+        instance_create(px,pr,obj_particles2);
+        instance_create(px,pr,obj_particles2);
+        instance_create(px,pr,obj_particles2);
+        instance_create(px,pr,obj_particles2);
+        instance_create(px,pr,obj_particles2);
+        }
+        
+        if fireLevel == 4
+        {
+        instance_create(px,pr,obj_particles3);
+        instance_create(px,pr,obj_particles3);
+        instance_create(px,pr,obj_particles3);
+        instance_create(px,pr,obj_particles3);
+        instance_create(px,pr,obj_particles3);
+        }
+        
+        if fireLevel == 6
+        {
+        instance_create(px,pr,obj_particles4);
+        instance_create(px,pr,obj_particles4);
+        instance_create(px,pr,obj_particles4);
+        instance_create(px,pr,obj_particles4);
+        instance_create(px,pr,obj_particles4);
+        }
+        
+/////////////////////////////////////////////////////////////AUDIO
         if (audio_is_playing(sfx_addFire))
         {
             //Do Nothing
@@ -321,13 +368,13 @@ if image_xscale &lt;= minScale
             <kind>1</kind>
             <string>///Fire States
 
-if kindle &gt;= 140
+if kindle &gt;= 170
 {
     fireLevel = 7;
     ending = 2;
 }
 
-if ((kindle &gt; 120) &amp;&amp; (kindle &lt; 140))
+if ((kindle &gt; 120) &amp;&amp; (kindle &lt; 170))
 {
     fireLevel = 7;
 }
@@ -372,49 +419,49 @@ if kindle &lt;= 0
 if fireLevel = 0
 {
     sprite_index = spr_fireDead;
-    obj_lightcontrols.fadeLevel = 1;
+    //obj_lightcontrols.fadeLevel = 1;
 }
 
 if fireLevel = 1
 {
     sprite_index = spr_fireLow;
-    obj_lightcontrols.fadeLevel = 0.9
+    //obj_lightcontrols.fadeLevel = 0.9
 }
 
 if fireLevel = 2
 {
     sprite_index = spr_fireMed;
-    obj_lightcontrols.fadeLevel = 0.8;
+    //obj_lightcontrols.fadeLevel = 0.8;
 }
 
 if fireLevel = 3
 {
     sprite_index = spr_fireMedHigh;
-    obj_lightcontrols.fadeLevel = 0.7;
+    //obj_lightcontrols.fadeLevel = 0.7;
 }
 
 if fireLevel = 4
 {
     sprite_index = spr_fireHigh;
-    obj_lightcontrols.fadeLevel = 0.6;
+    //obj_lightcontrols.fadeLevel = 0.6;
 }
 
 if fireLevel = 5
 {
     sprite_index = spr_fireHigher;
-    obj_lightcontrols.fadeLevel = 0.5;
+    //obj_lightcontrols.fadeLevel = 0.5;
 }
 
 if fireLevel = 6
 {
     sprite_index = spr_fireHigher2;
-    obj_lightcontrols.fadeLevel = 0.4;
+    //obj_lightcontrols.fadeLevel = 0.4;
 }
 
 if fireLevel = 7
 {
     sprite_index = spr_fireMax;
-    obj_lightcontrols.fadeLevel = 0.3;
+   // obj_lightcontrols.fadeLevel = 0.3;
 }
 
 //Fire Sound Effects Controller
@@ -443,13 +490,26 @@ if fireLevel &gt;= 3 &amp;&amp; fireLevel &lt;= 5 &amp;&amp; !audio_is_playing(s
     }
     audio_play_sound(sfx_fireMD,0,1);
 }
-if fireLevel &gt;= 6 &amp;&amp; !audio_is_playing(sfx_fireLG)
+if fireLevel == 6 &amp;&amp; !audio_is_playing(sfx_fireLG)
 {
     if audio_is_playing(sfx_fireMD)
     {
         audio_stop_sound(sfx_fireMD);
     }
+    if audio_is_playing(sfx_fireMAX)
+    {
+        audio_stop_sound(sfx_fireMAX);
+    }
     audio_play_sound(sfx_fireLG,0,1);
+}
+
+if fireLevel == 7 &amp;&amp; !audio_is_playing(sfx_fireMAX)
+{
+    if audio_is_playing(sfx_fireLG)
+    {
+        audio_stop_sound(sfx_fireLG);
+    }
+    audio_play_sound(sfx_fireMAX,0,1);
 }
 
 

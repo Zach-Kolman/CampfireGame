@@ -6,12 +6,17 @@
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\amb_night</sound>
-    <sound>sound\sfx_fireSM</sound>
-    <sound>sound\sfx_fireMD</sound>
-    <sound>sound\sfx_fireLG</sound>
-    <sound>sound\sfx_addFire</sound>
     <sound>sound\music_story1</sound>
-    <sound>sound\sfx_eventChime</sound>
+    <sounds name="SoundEffects">
+      <sound>sound\sfx_eventChime</sound>
+      <sound>sound\sfx_fireSM</sound>
+      <sound>sound\sfx_fireMD</sound>
+      <sound>sound\sfx_fireLG</sound>
+      <sound>sound\sfx_addFire</sound>
+      <sound>sound\sfx_fireMAX</sound>
+      <sound>sound\sfx_eventCooking</sound>
+      <sound>sound\sfx_eventMemorial</sound>
+    </sounds>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_fire</sprite>
@@ -21,7 +26,6 @@
     <sprite>sprites\spr_BentTree</sprite>
     <sprite>sprites\spr_Campfire</sprite>
     <sprite>sprites\spr_SpikeTree1</sprite>
-    <sprite>sprites\spr_particles</sprite>
     <sprite>sprites\spr_tree1</sprite>
     <sprite>sprites\spr_fireDead</sprite>
     <sprite>sprites\spr_fireLow</sprite>
@@ -42,6 +46,12 @@
     <sprite>sprites\spr_hungryman</sprite>
     <sprite>sprites\spr_TreeAnim2Rev</sprite>
     <sprite>sprites\spr_TreeAnim</sprite>
+    <sprites name="Particles">
+      <sprite>sprites\spr_particles</sprite>
+      <sprite>sprites\spr_particles2</sprite>
+      <sprite>sprites\spr_particles3</sprite>
+      <sprite>sprites\spr_particles4</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_UnevenGround</background>
@@ -51,6 +61,9 @@
   <objects name="objects">
     <object>objects\obj_fire</object>
     <object>objects\obj_particles</object>
+    <object>objects\obj_particles2</object>
+    <object>objects\obj_particles3</object>
+    <object>objects\obj_particles4</object>
     <object>objects\obj_lightcontrols</object>
     <object>objects\obj_counter</object>
     <object>objects\env_sounds</object>
