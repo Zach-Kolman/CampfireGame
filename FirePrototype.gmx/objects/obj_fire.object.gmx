@@ -32,6 +32,7 @@ fireLevel = noone;
 ending = noone;
 
 instance_create(x,y,obj_eventController);
+instance_create(x,y,obj_glow);
 
 //Camera Properties
 //zoomLevel_Low = 
@@ -178,7 +179,7 @@ if ((ending != 1) &amp;&amp; (ending != 2))
 {
     if keyboard_check_pressed(vk_space) 
     {
-        if fireLevel == 3
+        if fireLevel &lt;= 3
         {
         instance_create(px,pr,obj_particles);
         instance_create(px,pr,obj_particles);
@@ -205,7 +206,7 @@ if ((ending != 1) &amp;&amp; (ending != 2))
         instance_create(px,pr,obj_particles3);
         }
         
-        if fireLevel == 6
+        if fireLevel &gt;= 6
         {
         instance_create(px,pr,obj_particles4);
         instance_create(px,pr,obj_particles4);
