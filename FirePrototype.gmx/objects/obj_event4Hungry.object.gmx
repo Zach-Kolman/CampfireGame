@@ -3,7 +3,7 @@
   <spriteName>spr_hungryman</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-505</depth>
+  <depth>-500</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -28,6 +28,7 @@
             <string>///Properties
 image_speed = 0.1;
 hungry = 0;
+audio_play_sound(sfx_eventCooking,0,1);
 </string>
           </argument>
         </arguments>
@@ -58,6 +59,10 @@ hungry = 0;
 if hungry &gt;= 500
 {
     obj_eventController.event4HungryEnd = 1;
+    if audio_is_playing(sfx_eventCooking)
+    {
+        audio_stop_sound(sfx_eventCooking);
+    }
     instance_destroy();
 }
 </string>

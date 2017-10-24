@@ -203,6 +203,10 @@ if instance_exists(obj_event4Cold) &amp;&amp; instance_exists(obj_event4Hungry)
 {
     if obj_fire.fireLevel &gt; 1
     {
+        if audio_is_playing(sfx_eventCooking)
+        {
+            audio_stop_sound(sfx_eventCooking);
+        }
         instance_destroy(obj_event4Hungry);
     }
     
