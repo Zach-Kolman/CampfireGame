@@ -17,6 +17,12 @@
       <sound>sound\sfx_eventCooking</sound>
       <sound>sound\sfx_eventMemorial</sound>
     </sounds>
+    <sounds name="Music">
+      <sound>sound\music_part1</sound>
+      <sound>sound\music_part2</sound>
+      <sound>sound\music_part3</sound>
+      <sound>sound\music_part4</sound>
+    </sounds>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_fire</sprite>
@@ -53,6 +59,13 @@
       <sprite>sprites\spr_particles4</sprite>
     </sprites>
     <sprite>sprites\spr_glow</sprite>
+    <sprites name="Minor Events">
+      <sprite>sprites\spr_owl</sprite>
+      <sprite>sprites\spr_mouse</sprite>
+      <sprite>sprites\spr_deer</sprite>
+      <sprite>sprites\spr_deerLook</sprite>
+      <sprite>sprites\spr_deerStand</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_UnevenGround</background>
@@ -90,6 +103,12 @@
     <object>objects\obj_campFire</object>
     <object>objects\obj_TreeAnim</object>
     <object>objects\obj_TreeAnimRev</object>
+    <object>objects\env_music</object>
+    <objects name="Minor Events">
+      <object>objects\obj_owl</object>
+      <object>objects\obj_mouse</object>
+      <object>objects\obj_deer</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room1</room>

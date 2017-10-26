@@ -115,7 +115,7 @@ lightSize = clamp(lightSize,2,6);
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>
-    <point>10,10</point>
+    <point>14,12</point>
     <point>2,100</point>
   </PhysicsShapePoints>
 </object>

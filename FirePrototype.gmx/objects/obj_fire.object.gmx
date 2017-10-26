@@ -3,7 +3,7 @@
   <spriteName>spr_fireMed</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-550</depth>
+  <depth>-801</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -99,7 +99,7 @@ instance_create(x,pr,obj_particles);
 instance_create(x,pr,obj_particles);
 }
 
-if fireLevel == 5
+if fireLevel == 4
 {
 instance_create(x,pr,obj_particles2);
 instance_create(x,pr,obj_particles2);
@@ -108,7 +108,7 @@ instance_create(x,pr,obj_particles2);
 instance_create(x,pr,obj_particles2);
 }
 
-if fireLevel == 4
+if fireLevel == 5
 {
 instance_create(x,pr,obj_particles3);
 instance_create(x,pr,obj_particles3);
@@ -173,7 +173,6 @@ instance_create(x,pr,obj_particles4);
             <kind>1</kind>
             <string>///Create Particles
 pr = random_range(y+64,y+48);
-px = random_range(x-32,x+32);
 
 if ((ending != 1) &amp;&amp; (ending != 2))
 {
@@ -181,44 +180,69 @@ if ((ending != 1) &amp;&amp; (ending != 2))
     {
         if fireLevel &lt;= 3
         {
-        instance_create(px,pr,obj_particles);
-        instance_create(px,pr,obj_particles);
-        instance_create(px,pr,obj_particles);
-        instance_create(px,pr,obj_particles);
-        instance_create(px,pr,obj_particles);
-        }
+        instance_create(x+32,pr,obj_particles);
+        instance_create(x+64,pr,obj_particles);
+        instance_create(x+48,pr,obj_particles);
+        instance_create(x+16,pr,obj_particles);
         
-        if fireLevel == 5
-        {
-        instance_create(px,pr,obj_particles2);
-        instance_create(px,pr,obj_particles2);
-        instance_create(px,pr,obj_particles2);
-        instance_create(px,pr,obj_particles2);
-        instance_create(px,pr,obj_particles2);
+        instance_create(x-32,pr,obj_particles);
+        instance_create(x-64,pr,obj_particles);
+        instance_create(x-48,pr,obj_particles);
+        instance_create(x-16,pr,obj_particles);
+        
+        instance_create(x,pr,obj_particles);
         }
         
         if fireLevel == 4
         {
-        instance_create(px,pr,obj_particles3);
-        instance_create(px,pr,obj_particles3);
-        instance_create(px,pr,obj_particles3);
-        instance_create(px,pr,obj_particles3);
-        instance_create(px,pr,obj_particles3);
+        instance_create(x+32,pr,obj_particles2);
+        instance_create(x+64,pr,obj_particles2);
+        instance_create(x+48,pr,obj_particles2);
+        instance_create(x+16,pr,obj_particles2);
+        
+        instance_create(x-32,pr,obj_particles2);
+        instance_create(x-64,pr,obj_particles2);
+        instance_create(x-48,pr,obj_particles2);
+        instance_create(x-16,pr,obj_particles2);
+        
+        instance_create(x,pr,obj_particles2);
+        }
+        
+        if fireLevel == 5
+        {
+        instance_create(x+32,pr,obj_particles3);
+        instance_create(x+64,pr,obj_particles3);
+        instance_create(x+48,pr,obj_particles3);
+        instance_create(x+16,pr,obj_particles3);
+        
+        instance_create(x-32,pr,obj_particles3);
+        instance_create(x-64,pr,obj_particles3);
+        instance_create(x-48,pr,obj_particles3);
+        instance_create(x-16,pr,obj_particles3);
+        
+        instance_create(x,pr,obj_particles3);
         }
         
         if fireLevel &gt;= 6
         {
-        instance_create(px,pr,obj_particles4);
-        instance_create(px,pr,obj_particles4);
-        instance_create(px,pr,obj_particles4);
-        instance_create(px,pr,obj_particles4);
-        instance_create(px,pr,obj_particles4);
+        instance_create(x+32,pr,obj_particles4);
+        instance_create(x+64,pr,obj_particles4);
+        instance_create(x+48,pr,obj_particles4);
+        instance_create(x+16,pr,obj_particles4);
+        
+        instance_create(x-32,pr,obj_particles4);
+        instance_create(x-64,pr,obj_particles4);
+        instance_create(x-48,pr,obj_particles4);
+        instance_create(x-16,pr,obj_particles4);
+        
+        instance_create(x,pr,obj_particles4);
         }
         
 /////////////////////////////////////////////////////////////AUDIO
         if (audio_is_playing(sfx_addFire))
         {
-            //Do Nothing
+            audio_stop_sound(sfx_addFire);
+            audio_play_sound(sfx_addFire,0,0);
         }
         else
         {
@@ -259,6 +283,41 @@ if ((ending != 1) &amp;&amp; (ending != 2))
         if (keyboard_check(vk_shift)) &amp;&amp; (kindle &gt; 0)
         {
             kindle-=0.25;
+        }
+        
+        if (keyboard_check(ord("1")))
+        {
+            kindle = 10;
+        }
+        
+        if (keyboard_check(ord("2")))
+        {
+            kindle = 30;
+        }
+        
+        if (keyboard_check(ord("3")))
+        {
+            kindle = 50;
+        }
+        
+        if (keyboard_check(ord("4")))
+        {
+            kindle = 70;
+        }
+        
+        if (keyboard_check(ord("5")))
+        {
+            kindle = 90;
+        }
+        
+        if (keyboard_check(ord("6")))
+        {
+            kindle = 110;
+        }
+        
+        if (keyboard_check(ord("7")))
+        {
+            kindle = 130;
         }
     }
     else

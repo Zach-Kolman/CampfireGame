@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-505</depth>
+  <depth>-800</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -28,7 +28,8 @@
             <string>///Properties
 surf = surface_create(room_width,room_height);
 surfScale = 1/8;
-fadeLevel = 0.85;
+//fadeLevel = 0.85;
+fadeLevel = 1;
 </string>
           </argument>
         </arguments>
