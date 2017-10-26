@@ -222,6 +222,56 @@ if instance_exists(obj_event4Cold) &amp;&amp; instance_exists(obj_event4Hungry)
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Minor-Events Controller
+//////////////////////////////////OWL
+if obj_fire.kindle == 55 &amp;&amp; !instance_exists(obj_owl)
+{
+   instance_create(1088,256,obj_owl);
+}
+
+if obj_fire.fireLevel != 3
+{
+   instance_destroy(obj_owl);
+}
+
+//////////////////////////////////MOUSE
+if obj_fire.kindle == 110 &amp;&amp; !instance_exists(obj_mouse)
+{
+   instance_create(1300,480,obj_mouse);
+}
+if instance_exists(obj_mouse)
+{
+    if obj_fire.fireLevel != 6 || obj_mouse.x &lt;= -100
+    {
+       instance_destroy(obj_mouse);
+    }
+}
+
+//////////////////////////////////DEER
+if obj_fire.kindle == 70 &amp;&amp; !instance_exists(obj_deer)
+{
+   instance_create(450,400,obj_deer);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
   </events>
   <PhysicsObject>0</PhysicsObject>

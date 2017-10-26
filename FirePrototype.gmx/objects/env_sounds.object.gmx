@@ -25,9 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>audio_play_sound(music_story1,0,1);
+            <string>//audio_play_sound(music_story1,0,1);
 audio_play_sound(amb_night,0,1);
-volume = 1;
+//volume = 1;
 </string>
           </argument>
         </arguments>
@@ -51,6 +51,7 @@ volume = 1;
           <argument>
             <kind>1</kind>
             <string>///Music Controller
+/*
 if (obj_fire.fireLevel &lt;= 1)
 {
     volume = 0;

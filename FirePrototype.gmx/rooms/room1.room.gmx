@@ -4,7 +4,7 @@
   <width>1280</width>
   <height>720</height>
   <vsnap>32</vsnap>
-  <hsnap>16</hsnap>
+  <hsnap>32</hsnap>
   <isometric>0</isometric>
   <speed>30</speed>
   <persistent>0</persistent>
@@ -12,7 +12,8 @@
   <showcolour>-1</showcolour>
   <code>instance_create(x,y,obj_lightcontrols);
 instance_create(x,y,obj_counter);
-instance_create(x,y,env_sounds);</code>
+instance_create(x,y,env_sounds);
+instance_create(x,y,env_music);</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>0</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
