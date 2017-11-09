@@ -53,9 +53,6 @@ timer3 = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-
-            <string>if timer &lt; 60 &amp;&amp; (timer2 == 0)
-
             <string>image_alpha = alphaScale;
 
 if alphaScale &lt; 1
@@ -63,7 +60,7 @@ if alphaScale &lt; 1
     alphaScale += 0.01;
 }
 
-
+if timer &lt; 60 &amp;&amp; (timer2 == 0)
 {
     timer++;
 }
@@ -105,8 +102,8 @@ if timer3 &gt;= 20
     instance_destroy(obj_deer);
 }
 
-show_debug_message(timer);
-show_debug_message(timer2);
+//show_debug_message(timer);
+//show_debug_message(timer2);
 </string>
           </argument>
         </arguments>
