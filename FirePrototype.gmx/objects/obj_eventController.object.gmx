@@ -164,7 +164,7 @@ if ((obj_fire.ending == 1) || (obj_fire.ending == 2))
             <kind>1</kind>
             <string>///Multi-Event Controller
 
-if instance_exists(obj_event2Boy) &amp;&amp; (event2part2Tick &lt; 500)
+if instance_exists(obj_event2Boy) &amp;&amp; (event2part2Tick &lt; 300)
 {
     event2part2Tick++;
 }

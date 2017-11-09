@@ -49,6 +49,7 @@ audio_play_sound(sfx_eventChime,0,0);
             <kind>1</kind>
             <string>///Properties
 image_speed = 0.25;
+image_alpha = 0;
 alphaScale = 0;
 eventEnd = 0;
 </string>
