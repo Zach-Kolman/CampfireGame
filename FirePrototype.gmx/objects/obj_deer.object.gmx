@@ -30,6 +30,7 @@ image_alpha = 0;
 alphaScale = 0;
 timer = 0;
 timer2 = 0;
+timer3 = 0;
 </string>
           </argument>
         </arguments>
@@ -52,6 +53,9 @@ timer2 = 0;
         <arguments>
           <argument>
             <kind>1</kind>
+
+            <string>if timer &lt; 60 &amp;&amp; (timer2 == 0)
+
             <string>image_alpha = alphaScale;
 
 if alphaScale &lt; 1
@@ -59,27 +63,50 @@ if alphaScale &lt; 1
     alphaScale += 0.01;
 }
 
-if timer &lt; 60
+
 {
     timer++;
 }
 
-if timer &gt;= 60
+if timer &gt;= 60 &amp;&amp; timer2 &lt; 150
 {
     sprite_index = spr_deer;
     image_speed = 0.1;
 }
 
-if obj_fire.fireLevel != 4
+if timer &gt;= 60 &amp;&amp; timer2 &lt;= 210
 {
     timer2++;
+}
+
+if timer2 == 150
+{
     sprite_index = spr_deerLook;
 }
 
-if timer2 &gt;= 20
+if timer2 &gt;= 210
+{
+    timer = 0;
+    timer2 = 0;
+}
+
+
+ 
+
+
+if obj_fire.fireLevel != 4
+{
+    timer3++;
+    sprite_index = spr_deerLook;
+}
+
+if timer3 &gt;= 20
 {
     instance_destroy(obj_deer);
 }
+
+show_debug_message(timer);
+show_debug_message(timer2);
 </string>
           </argument>
         </arguments>

@@ -257,7 +257,7 @@ if obj_fire.kindle == 110 &amp;&amp; !instance_exists(obj_mouse)
 }
 if instance_exists(obj_mouse)
 {
-    if obj_fire.fireLevel != 6 || obj_mouse.x &lt;= -100
+    if obj_mouse.x &lt;= -100
     {
        instance_destroy(obj_mouse);
     }
