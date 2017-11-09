@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>image_speed = 0;
+image_alpha = 0;
+alphaScale = 0;
 timer = 0;
 timer2 = 0;
 timer3 = 0;
@@ -51,7 +53,17 @@ timer3 = 0;
         <arguments>
           <argument>
             <kind>1</kind>
+
             <string>if timer &lt; 60 &amp;&amp; (timer2 == 0)
+
+            <string>image_alpha = alphaScale;
+
+if alphaScale &lt; 1
+{
+    alphaScale += 0.01;
+}
+
+
 {
     timer++;
 }
