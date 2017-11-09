@@ -31,6 +31,7 @@ image_speed = 0.25;
 stop = 0;
 event1Tick2=0;
 eventEnd = 0;
+tapped = 0;
 </string>
           </argument>
         </arguments>
@@ -76,7 +77,7 @@ audio_play_sound(sfx_eventChime,0,0);
           <argument>
             <kind>1</kind>
             <string>///Movement
-if (stop == 0) || (obj_fire.fireLevel != 4) || (eventEnd = 1)
+if (stop == 0) || (eventEnd = 1)
 {
 sprite_index = spr_character;
 x-=0.75;
@@ -96,8 +97,12 @@ if x &lt;= -128
 
 if (x &lt;= 700 &amp;&amp; x &gt;=600) &amp;&amp; (event1Tick2 &lt; 300)
 {
-    
-    if (obj_fire.fireLevel == 4)
+    if keyboard_check_released(vk_space)
+    {
+        tapped += 1;
+    }
+   // if (obj_fire.fireLevel == 4)
+   if (tapped &gt;= 5)
     {
     stop = 1;
     sprite_index = spr_walkerStand;
@@ -105,7 +110,7 @@ if (x &lt;= 700 &amp;&amp; x &gt;=600) &amp;&amp; (event1Tick2 &lt; 300)
     }
 }
 
-if (event1Tick2 &gt;= 300) &amp;&amp; (event1Tick2 &lt; 900) &amp;&amp; (obj_fire.fireLevel = 4)
+if (event1Tick2 &gt;= 300) &amp;&amp; (event1Tick2 &lt; 900) &amp;&amp; (tapped &gt;= 5)
 {
     sprite_index = spr_walkerReach;
     if image_index = 6
@@ -120,7 +125,10 @@ if event1Tick2 &gt;= 900
 {
     eventEnd = 1;
 }
-//show_debug_message(event1Tick2);
+show_debug_message(event1Tick2);
+show_debug_message(tapped);
+
+
 </string>
           </argument>
         </arguments>

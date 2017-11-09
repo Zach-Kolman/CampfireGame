@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>image_speed = 0;
+image_alpha = 0;
+alphaScale = 0;
 timer = 0;
 timer2 = 0;
 </string>
@@ -50,7 +52,14 @@ timer2 = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if timer &lt; 60
+            <string>image_alpha = alphaScale;
+
+if alphaScale &lt; 1
+{
+    alphaScale += 0.01;
+}
+
+if timer &lt; 60
 {
     timer++;
 }
@@ -58,7 +67,7 @@ timer2 = 0;
 if timer &gt;= 60
 {
     sprite_index = spr_deer;
-    image_speed = 0.25;
+    image_speed = 0.1;
 }
 
 if obj_fire.fireLevel != 4
