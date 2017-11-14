@@ -29,6 +29,10 @@
 track2 = 0;
 track3 = 0;
 track4 = 0;
+audio_sound_gain(music_part1,track1,0);
+audio_sound_gain(music_part2,track2,0);
+audio_sound_gain(music_part3,track3,0);
+audio_sound_gain(music_part4,track4,0);
 </string>
           </argument>
         </arguments>
@@ -59,58 +63,58 @@ if (obj_fire.fireLevel &lt;= 1)
     track2 = 0;
     track3 = 0;
     track4 = 0;
-    audio_sound_gain(music_part1,track1,120);
-    audio_sound_gain(music_part2,track2,120);
-    audio_sound_gain(music_part3,track3,120);
-    audio_sound_gain(music_part4,track4,120);
+    audio_sound_gain(music_part1,track1,180);
+    audio_sound_gain(music_part2,track2,180);
+    audio_sound_gain(music_part3,track3,180);
+    audio_sound_gain(music_part4,track4,180);
 }
 
 if (obj_fire.fireLevel &gt; 1) &amp;&amp; (obj_fire.fireLevel &lt; 3)
 {
-    track1 = 1;
+    track1 = 0.25;
     track2 = 0;
     track3 = 0;
     track4 = 0;
-    audio_sound_gain(music_part1,track1,120);
-    audio_sound_gain(music_part2,track2,120);
-    audio_sound_gain(music_part3,track3,120);
-    audio_sound_gain(music_part4,track4,120);
+    audio_sound_gain(music_part1,track1,180);
+    audio_sound_gain(music_part2,track2,180);
+    audio_sound_gain(music_part3,track3,180);
+    audio_sound_gain(music_part4,track4,180);
 }
 
 if (obj_fire.fireLevel &gt;= 3) &amp;&amp; (obj_fire.fireLevel &lt; 5)
 {
-    track1 = 1;
-    track2 = 1;
+    track1 = 0.25;
+    track2 = 0.25;
     track3 = 0;
     track4 = 0;
-    audio_sound_gain(music_part1,track1,120);
-    audio_sound_gain(music_part2,track2,120);
-    audio_sound_gain(music_part3,track3,120);
-    audio_sound_gain(music_part4,track4,120);
+    audio_sound_gain(music_part1,track1,180);
+    audio_sound_gain(music_part2,track2,180);
+    audio_sound_gain(music_part3,track3,180);
+    audio_sound_gain(music_part4,track4,180);
 }
 
 if (obj_fire.fireLevel &gt;= 5) &amp;&amp; (obj_fire.fireLevel &lt; 6)
 {
-    track1 = 1;
-    track2 = 1;
-    track3 = 1;
+    track1 = 0.25;
+    track2 = 0.25;
+    track3 = 0.25;
     track4 = 0;
-    audio_sound_gain(music_part1,track1,120);
-    audio_sound_gain(music_part2,track2,120);
-    audio_sound_gain(music_part3,track3,120);
-    audio_sound_gain(music_part4,track4,120);
+    audio_sound_gain(music_part1,track1,180);
+    audio_sound_gain(music_part2,track2,180);
+    audio_sound_gain(music_part3,track3,180);
+    audio_sound_gain(music_part4,track4,180);
 }
 
 if (obj_fire.fireLevel &gt;= 6) &amp;&amp; (obj_fire.fireLevel &lt; 7)
 {
-    track1 = 1;
-    track2 = 1;
-    track3 = 1;
-    track4 = 1;
-    audio_sound_gain(music_part1,track1,120);
-    audio_sound_gain(music_part2,track2,120);
-    audio_sound_gain(music_part3,track3,120);
-    audio_sound_gain(music_part4,track4,120);
+    track1 = 0.25;
+    track2 = 0.25;
+    track3 = 0.25;
+    track4 = 0.25;
+    audio_sound_gain(music_part1,track1,180);
+    audio_sound_gain(music_part2,track2,180);
+    audio_sound_gain(music_part3,track3,180);
+    audio_sound_gain(music_part4,track4,180);
 }
 
 if (obj_fire.fireLevel = 7)
@@ -119,10 +123,10 @@ if (obj_fire.fireLevel = 7)
     track2 = 0;
     track3 = 0;
     track4 = 0;
-    audio_sound_gain(music_part1,track1,120);
-    audio_sound_gain(music_part2,track2,120);
-    audio_sound_gain(music_part3,track3,120);
-    audio_sound_gain(music_part4,track4,120);
+    audio_sound_gain(music_part1,track1,180);
+    audio_sound_gain(music_part2,track2,180);
+    audio_sound_gain(music_part3,track3,180);
+    audio_sound_gain(music_part4,track4,180);
 }
 
 </string>

@@ -27,12 +27,12 @@
             <kind>1</kind>
             <string>///Properties
 image_speed = 0.25;
-kindle = 50;
+kindle = 0;
 fireLevel = noone;
 ending = noone;
 
 instance_create(x,y,obj_eventController);
-instance_create(x,y,obj_glow);
+instance_create(x,y+10,obj_glow);
 
 //Camera Properties
 //zoomLevel_Low = 
@@ -174,7 +174,7 @@ instance_create(x,pr,obj_particles4);
             <string>///Create Particles
 pr = random_range(y+64,y+48);
 
-if ((ending != 1) &amp;&amp; (ending != 2))
+if (ending != 2)
 {
     if keyboard_check_pressed(vk_space) 
     {
@@ -237,17 +237,6 @@ if ((ending != 1) &amp;&amp; (ending != 2))
         
         instance_create(x,pr,obj_particles4);
         }
-        
-/////////////////////////////////////////////////////////////AUDIO
-        if (audio_is_playing(sfx_addFire))
-        {
-            audio_stop_sound(sfx_addFire);
-            audio_play_sound(sfx_addFire,0,0);
-        }
-        else
-        {
-            audio_play_sound(sfx_addFire,0,0);
-        }
     }
 }
 </string>
@@ -271,11 +260,11 @@ if ((ending != 1) &amp;&amp; (ending != 2))
           <argument>
             <kind>1</kind>
             <string>///Fire Shrinking
-if ((ending != 1) &amp;&amp; (ending != 2))
+if (ending != 2)
 {
     if cheatsActive = true
     {
-        if (keyboard_check(vk_space)) &amp;&amp; (kindle &lt; 140)
+        if (keyboard_check(vk_space)) &amp;&amp; (kindle &lt; 170)
         {
             kindle+=0.25;
         }
@@ -322,7 +311,7 @@ if ((ending != 1) &amp;&amp; (ending != 2))
     }
     else
     {
-        if (keyboard_check_pressed(vk_space)) &amp;&amp; (kindle &lt; 140)
+        if (keyboard_check_pressed(vk_space)) &amp;&amp; (kindle &lt; 170)
         {
             kindle+=1;
         }
@@ -473,6 +462,11 @@ if kindle &lt;= 0
 {
     fireLevel = 0;
     ending = 1;
+}
+
+if (kindle &gt; 0) &amp;&amp; (kindle &lt; 170)
+{
+    ending = 0;
 }
 
 //Visuals Controller
@@ -730,6 +724,53 @@ if (keyboard_check_pressed(vk_escape))
 {
     audio_stop_all();
     room_restart();
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///SFX
+
+if (ending != 2)
+{
+    if keyboard_check_pressed(vk_space)
+    {
+    
+        if (audio_is_playing(sfx_addFire)) &amp;&amp; (audio_is_playing(sfx_addFire2))
+        {
+            audio_play_sound(sfx_addFire3,0,0);
+            audio_stop_sound(sfx_addFire);
+        }
+        else
+        {
+            if (audio_is_playing(sfx_addFire))
+            {
+            audio_play_sound(sfx_addFire2,0,0);
+            }
+            else
+            {
+            audio_play_sound(sfx_addFire,0,0);
+            audio_stop_sound(sfx_addFire2);
+            }
+        }
+
+    }       
 }
 </string>
           </argument>

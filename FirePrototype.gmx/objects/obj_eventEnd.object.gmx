@@ -3,7 +3,7 @@
   <spriteName>spr_eventEnd</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-600</depth>
+  <depth>-1000</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>image_speed = 0;
+theEnd = 0;
 </string>
           </argument>
         </arguments>
@@ -48,21 +49,24 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if obj_fire.ending == 2
+            <string>if (theEnd == 0) &amp;&amp; (instance_exists(obj_fire))
 {
-    audio_stop_all();
-    image_index = 1;
-}
-
-if obj_fire.ending == 1
-{
-    if audio_is_playing(music_story1)
+    if obj_fire.ending == 2
     {
-        audio_stop_sound(music_story1);
+        audio_stop_all();
+        room_goto_next();
     }
-    image_index = 0;
+    
+    if obj_fire.ending == 1
+    {
+        image_index = 0;
+    }
+    
+    if obj_fire.ending == 0
+    {
+        instance_destroy();
+    }
 }
-
 
 </string>
           </argument>

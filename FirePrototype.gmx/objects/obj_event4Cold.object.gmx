@@ -25,8 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///SFX
-audio_play_sound(sfx_eventChime,0,0);
+            <string>///Properties
+image_speed = 0.1;
+image_alpha = 0;
+alphaScale = 0;
+eventTick = 0;
+eventEnd = 0;
 </string>
           </argument>
         </arguments>
@@ -47,9 +51,8 @@ audio_play_sound(sfx_eventChime,0,0);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Properties
-image_speed = 0.1;
-freezing = 0;
+            <string>///SFX
+audio_play_sound(sfx_eventChime,0,0);
 </string>
           </argument>
         </arguments>
@@ -72,7 +75,63 @@ freezing = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if obj_fire.fireLevel == 1
+            <string>///Code
+image_alpha = alphaScale;
+
+if alphaScale &lt; 1 &amp;&amp; eventEnd == 0
+{
+    alphaScale += 0.01;
+}
+
+if alphaScale == 1
+{
+    eventTick++;
+}
+
+if eventTick == 300
+{
+    eventEnd = 1;
+}
+
+if eventEnd == 1
+{
+    alphaScale -= 0.01;
+}
+
+if eventEnd == 1 &amp;&amp; alphaScale == 0
+{
+    obj_eventController.event4Tick = 0;
+    global.eventGoing = 0;
+    instance_destroy();
+}
+
+if obj_fire.fireLevel != 1
+{
+    eventEnd = 1;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///OLD CODE
+/*
+if obj_fire.fireLevel == 1
 {
     freezing++;
 }

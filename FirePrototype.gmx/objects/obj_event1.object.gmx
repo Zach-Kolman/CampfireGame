@@ -91,8 +91,9 @@ else
 
 if x &lt;= -128
 {
-    instance_destroy();
+    global.eventGoing = 0;
     obj_eventController.event1Tick = 0;
+    instance_destroy();
 }
 
 if (x &lt;= 700 &amp;&amp; x &gt;=600) &amp;&amp; (event1Tick2 &lt; 300)
