@@ -7,10 +7,10 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>123</bbox_left>
-  <bbox_right>398</bbox_right>
-  <bbox_top>13</bbox_top>
-  <bbox_bottom>303</bbox_bottom>
+  <bbox_left>145</bbox_left>
+  <bbox_right>373</bbox_right>
+  <bbox_top>104</bbox_top>
+  <bbox_bottom>312</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
@@ -40,5 +40,14 @@
     <frame index="17">images\spr_fireHigher_17.png</frame>
     <frame index="18">images\spr_fireHigher_18.png</frame>
     <frame index="19">images\spr_fireHigher_19.png</frame>
+    <frame index="20">images\spr_fireHigher_20.png</frame>
+    <frame index="21">images\spr_fireHigher_21.png</frame>
+    <frame index="22">images\spr_fireHigher_22.png</frame>
+    <frame index="23">images\spr_fireHigher_23.png</frame>
+    <frame index="24">images\spr_fireHigher_24.png</frame>
+    <frame index="25">images\spr_fireHigher_25.png</frame>
+    <frame index="26">images\spr_fireHigher_26.png</frame>
+    <frame index="27">images\spr_fireHigher_27.png</frame>
+    <frame index="28">images\spr_fireHigher_28.png</frame>
   </frames>
 </sprite>

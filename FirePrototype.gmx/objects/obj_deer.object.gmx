@@ -31,6 +31,8 @@ alphaScale = 0;
 timer = 0;
 timer2 = 0;
 timer3 = 0;
+
+minorDie = 0;
 </string>
           </argument>
         </arguments>
@@ -55,7 +57,7 @@ timer3 = 0;
             <kind>1</kind>
             <string>image_alpha = alphaScale;
 
-if alphaScale &lt; 1
+if alphaScale &lt; 1 &amp;&amp; minorDie == 0
 {
     alphaScale += 0.01;
 }
@@ -99,7 +101,23 @@ if obj_fire.fireLevel != 4
 
 if timer3 &gt;= 20
 {
-    instance_destroy(obj_deer);
+    minorDie = 1;
+}
+
+if minorDie == 1 &amp;&amp; alphaScale &gt; 0
+{
+    alphaScale -= 0.01;
+}
+
+
+if minorDie == 1 &amp;&amp; alphaScale == 0
+{
+    instance_destroy();
+}
+
+if global.eventGoing == 1
+{
+    minorDie = 1;
 }
 
 //show_debug_message(timer);

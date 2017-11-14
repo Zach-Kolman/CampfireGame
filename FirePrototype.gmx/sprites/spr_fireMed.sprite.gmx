@@ -7,10 +7,10 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>149</bbox_left>
-  <bbox_right>393</bbox_right>
-  <bbox_top>1</bbox_top>
-  <bbox_bottom>298</bbox_bottom>
+  <bbox_left>166</bbox_left>
+  <bbox_right>341</bbox_right>
+  <bbox_top>130</bbox_top>
+  <bbox_bottom>309</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
@@ -34,41 +34,5 @@
     <frame index="11">images\spr_fireMed_11.png</frame>
     <frame index="12">images\spr_fireMed_12.png</frame>
     <frame index="13">images\spr_fireMed_13.png</frame>
-    <frame index="14">images\spr_fireMed_14.png</frame>
-    <frame index="15">images\spr_fireMed_15.png</frame>
-    <frame index="16">images\spr_fireMed_16.png</frame>
-    <frame index="17">images\spr_fireMed_17.png</frame>
-    <frame index="18">images\spr_fireMed_18.png</frame>
-    <frame index="19">images\spr_fireMed_19.png</frame>
-    <frame index="20">images\spr_fireMed_20.png</frame>
-    <frame index="21">images\spr_fireMed_21.png</frame>
-    <frame index="22">images\spr_fireMed_22.png</frame>
-    <frame index="23">images\spr_fireMed_23.png</frame>
-    <frame index="24">images\spr_fireMed_24.png</frame>
-    <frame index="25">images\spr_fireMed_25.png</frame>
-    <frame index="26">images\spr_fireMed_26.png</frame>
-    <frame index="27">images\spr_fireMed_27.png</frame>
-    <frame index="28">images\spr_fireMed_28.png</frame>
-    <frame index="29">images\spr_fireMed_29.png</frame>
-    <frame index="30">images\spr_fireMed_30.png</frame>
-    <frame index="31">images\spr_fireMed_31.png</frame>
-    <frame index="32">images\spr_fireMed_32.png</frame>
-    <frame index="33">images\spr_fireMed_33.png</frame>
-    <frame index="34">images\spr_fireMed_34.png</frame>
-    <frame index="35">images\spr_fireMed_35.png</frame>
-    <frame index="36">images\spr_fireMed_36.png</frame>
-    <frame index="37">images\spr_fireMed_37.png</frame>
-    <frame index="38">images\spr_fireMed_38.png</frame>
-    <frame index="39">images\spr_fireMed_39.png</frame>
-    <frame index="40">images\spr_fireMed_40.png</frame>
-    <frame index="41">images\spr_fireMed_41.png</frame>
-    <frame index="42">images\spr_fireMed_42.png</frame>
-    <frame index="43">images\spr_fireMed_43.png</frame>
-    <frame index="44">images\spr_fireMed_44.png</frame>
-    <frame index="45">images\spr_fireMed_45.png</frame>
-    <frame index="46">images\spr_fireMed_46.png</frame>
-    <frame index="47">images\spr_fireMed_47.png</frame>
-    <frame index="48">images\spr_fireMed_48.png</frame>
-    <frame index="49">images\spr_fireMed_49.png</frame>
   </frames>
 </sprite>

@@ -32,9 +32,9 @@ event2Tick=0;
 event2part2Tick=0;
 event3Tick=0;
 event4Tick=0;
-event4Freezing=0;
-event4ColdEnd=0;
-event4HungryEnd=0;
+event5Tick=0;
+
+global.eventGoing = 0;
 </string>
           </argument>
         </arguments>
@@ -71,22 +71,24 @@ if obj_fire.fireLevel != 3 &amp;&amp; event1Tick &gt; 0
 ////////////////////Event Start
 if event1Tick == 600 &amp;&amp; !instance_exists(obj_event1)
 {
+    global.eventGoing = 1;
     instance_create(1300,500,obj_event1);
 }
 
 ///////////////////////////////////////////////////////////////////Event 2 Sitters
-if (obj_fire.fireLevel == 4 || obj_fire.fireLevel == 5) &amp;&amp; event2Tick &lt; 1000
+if obj_fire.fireLevel == 4 &amp;&amp; event2Tick &lt; 1000
 {
     event2Tick++;
 }
 
-if (obj_fire.fireLevel &lt; 4 || obj_fire.fireLevel &gt; 5) &amp;&amp; event2Tick &gt; 0
+if obj_fire.fireLevel != 4 &amp;&amp; event2Tick &gt; 0
 {
     event2Tick--;
 }
 ////////////////////Event Start
 if event2Tick == 600 &amp;&amp; !instance_exists(obj_event2Boy)
 {
+    global.eventGoing = 1;
     instance_create(800,480,obj_event2Boy);
 }
 
@@ -103,11 +105,12 @@ if obj_fire.fireLevel != 2 &amp;&amp; event3Tick &gt; 0
 ////////////////////Event Start
 if event3Tick == 600 &amp;&amp; !instance_exists(obj_event3Memorial)
 {
+    global.eventGoing = 1;
     instance_create(864,448,obj_event3Memorial);
 }
 
-///////////////////////////////////////////////////////////////////Event 4 Choice
-if obj_fire.fireLevel == 1 &amp;&amp; event4Tick &lt; 1000
+///////////////////////////////////////////////////////////////////Event 4 Cold
+if obj_fire.fireLevel == 1 &amp;&amp; event4Tick &lt; 300
 {
     event4Tick++;
 }
@@ -117,20 +120,32 @@ if obj_fire.fireLevel != 1 &amp;&amp; event4Tick &gt; 0
     event4Tick--;
 }
 ////////////////////Event Start
-if event4Tick == 600 &amp;&amp; !instance_exists(obj_event4Cold) &amp;&amp; !instance_exists(obj_event4Hungry) 
+if event4Tick == 300 &amp;&amp; !instance_exists(obj_event4Cold) 
 {
-    if event4ColdEnd == 0
-    {
-        instance_create(800,480,obj_event4Cold);
-    }
-    if event4HungryEnd == 0
-    {
-        instance_create(448,480,obj_event4Hungry);
-    }
+    global.eventGoing = 1;
+    instance_create(800,500,obj_event4Cold);
+}
+
+///////////////////////////////////////////////////////////////////Event 5 Hungry
+if obj_fire.fireLevel == 5 &amp;&amp; event5Tick &lt; 300
+{
+    event5Tick++;
+}
+
+if obj_fire.fireLevel != 5 &amp;&amp; event5Tick &gt; 0
+{
+    event5Tick--;
+}
+////////////////////Event Start
+if event5Tick == 300 &amp;&amp; !instance_exists(obj_event4Hungry) 
+{
+    global.eventGoing = 1;
+    instance_create(500,512,obj_event4Hungry);
 }
 
 
-//show_debug_message(event3Tick);
+show_debug_message(event4Tick);
+show_debug_message(event5Tick);
 //show_debug_message(obj_fire.fireLevel);
 
 
@@ -168,12 +183,8 @@ if instance_exists(obj_event2Boy) &amp;&amp; (event2part2Tick &lt; 300)
 {
     event2part2Tick++;
 }
-else
-{
-    event2part2Tick--;
-}
 
-if event2part2Tick == 300 &amp;&amp; !instance_exists(obj_event2Girl)
+if event2part2Tick == 300 &amp;&amp; !instance_exists(obj_event2Girl) &amp;&amp; instance_exists(obj_event2Boy)
 {
     instance_create(448,480,obj_event2Girl);
 }
@@ -198,7 +209,7 @@ if event2part2Tick == 300 &amp;&amp; !instance_exists(obj_event2Girl)
           <argument>
             <kind>1</kind>
             <string>///Choice-Event Controller
-
+/*NO LONGER USED
 if instance_exists(obj_event4Cold) &amp;&amp; instance_exists(obj_event4Hungry)
 {
     if obj_fire.fireLevel &gt; 1
@@ -243,11 +254,6 @@ if instance_exists(obj_event4Cold) &amp;&amp; instance_exists(obj_event4Hungry)
 if obj_fire.kindle == 55 &amp;&amp; !instance_exists(obj_owl)
 {
    instance_create(1088,256,obj_owl);
-}
-
-if obj_fire.fireLevel != 3
-{
-   instance_destroy(obj_owl);
 }
 
 //////////////////////////////////MOUSE

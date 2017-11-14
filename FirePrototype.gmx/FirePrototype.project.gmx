@@ -16,6 +16,8 @@
       <sound>sound\sfx_fireMAX</sound>
       <sound>sound\sfx_eventCooking</sound>
       <sound>sound\sfx_eventMemorial</sound>
+      <sound>sound\sfx_addFire2</sound>
+      <sound>sound\sfx_addFire3</sound>
     </sounds>
     <sounds name="Music">
       <sound>sound\music_part1</sound>
@@ -45,6 +47,7 @@
     <sprite>sprites\spr_walkerStand</sprite>
     <sprite>sprites\spr_walkerReach</sprite>
     <sprite>sprites\spr_eventEnd</sprite>
+    <sprite>sprites\spr_burnDown</sprite>
     <sprite>sprites\spr_sitterBoy</sprite>
     <sprite>sprites\spr_sitterGirl</sprite>
     <sprite>sprites\spr_memorial</sprite>
@@ -82,22 +85,13 @@
     <object>objects\obj_lightcontrols</object>
     <object>objects\obj_counter</object>
     <object>objects\env_sounds</object>
-    <object>objects\obj_tree1_fg</object>
-    <object>objects\obj_SpikeTree1_fg</object>
-    <object>objects\obj_SpikeTree2_fg</object>
-    <object>objects\obj_SpikeTree3_fg</object>
-    <object>objects\ob_BentTree_fg</object>
-    <object>objects\obj_tree1_bg</object>
-    <object>objects\obj_SpikeTree1_bg</object>
-    <object>objects\obj_SpikeTree2_bg</object>
-    <object>objects\obj_SpikeTree3_bg</object>
-    <object>objects\obj_BentTree_bg</object>
     <object>objects\obj_event1</object>
     <object>objects\obj_event2Boy</object>
     <object>objects\obj_event2Girl</object>
     <object>objects\obj_event3Memorial</object>
     <object>objects\obj_eventController</object>
     <object>objects\obj_eventEnd</object>
+    <object>objects\obj_burnDown</object>
     <object>objects\obj_event4Cold</object>
     <object>objects\obj_event4Hungry</object>
     <object>objects\obj_campFire</object>
@@ -112,6 +106,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room1</room>
+    <room>rooms\room2</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

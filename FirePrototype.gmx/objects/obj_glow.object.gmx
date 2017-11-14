@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>lightSize = 1; // 2
+            <string>lightSize = 0; // 2
 lightStrength = 0.25; // 1
 
 </string>
@@ -50,42 +50,42 @@ lightStrength = 0.25; // 1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var flickr = choose(.05,-.05,0);
+            <string>var flickr = choose(.01,-.01,0);
 lightSize += flickr;
 
 if obj_fire.fireLevel == 1
 {
-lightSize = clamp(lightSize,0.1,0.5);
+lightSize = clamp(lightSize,0.5,1);
 }
 
 if obj_fire.fireLevel == 2
 {
-lightSize = clamp(lightSize,0.5,1);
+lightSize = clamp(lightSize,1,1.5);
 }
 
 if obj_fire.fireLevel == 3
 {
-lightSize = clamp(lightSize,1,1.5);
+lightSize = clamp(lightSize,1.5,2);
 }
 
 if obj_fire.fireLevel == 4
 {
-lightSize = clamp(lightSize,1.5,2);
+lightSize = clamp(lightSize,2,2.5);
 }
 
 if obj_fire.fireLevel == 5
 {
-lightSize = clamp(lightSize,2,2.5);
+lightSize = clamp(lightSize,2.5,3);
 }
 
 if obj_fire.fireLevel == 6
 {
-lightSize = clamp(lightSize,2.5,3);
+lightSize = clamp(lightSize,3,3.5);
 }
 
 if obj_fire.fireLevel == 7
 {
-lightSize = clamp(lightSize,3,3.5);
+lightSize = clamp(lightSize,3.5,10);
 }
 
 if keyboard_check_pressed(vk_space)

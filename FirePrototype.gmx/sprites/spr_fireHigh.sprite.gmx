@@ -7,10 +7,10 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>131</bbox_left>
-  <bbox_right>377</bbox_right>
-  <bbox_top>34</bbox_top>
-  <bbox_bottom>302</bbox_bottom>
+  <bbox_left>164</bbox_left>
+  <bbox_right>336</bbox_right>
+  <bbox_top>145</bbox_top>
+  <bbox_bottom>315</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
@@ -34,5 +34,16 @@
     <frame index="11">images\spr_fireHigh_11.png</frame>
     <frame index="12">images\spr_fireHigh_12.png</frame>
     <frame index="13">images\spr_fireHigh_13.png</frame>
+    <frame index="14">images\spr_fireHigh_14.png</frame>
+    <frame index="15">images\spr_fireHigh_15.png</frame>
+    <frame index="16">images\spr_fireHigh_16.png</frame>
+    <frame index="17">images\spr_fireHigh_17.png</frame>
+    <frame index="18">images\spr_fireHigh_18.png</frame>
+    <frame index="19">images\spr_fireHigh_19.png</frame>
+    <frame index="20">images\spr_fireHigh_20.png</frame>
+    <frame index="21">images\spr_fireHigh_21.png</frame>
+    <frame index="22">images\spr_fireHigh_22.png</frame>
+    <frame index="23">images\spr_fireHigh_23.png</frame>
+    <frame index="24">images\spr_fireHigh_24.png</frame>
   </frames>
 </sprite>

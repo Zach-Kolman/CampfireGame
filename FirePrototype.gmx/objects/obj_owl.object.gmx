@@ -27,7 +27,9 @@
             <kind>1</kind>
             <string>image_speed = 0;
 timer = 0;
-image_alpha = 0.5;
+image_alpha = 0;
+alphaScale = 0;
+minorDie = 0;
 </string>
           </argument>
         </arguments>
@@ -66,7 +68,34 @@ if timer &gt;= 180
 }
 }
 
-show_debug_message(timer);
+image_alpha = alphaScale;
+
+if alphaScale &lt; 0.5 &amp;&amp; minorDie == 0
+{
+    alphaScale += 0.01;
+}
+
+if obj_fire.fireLevel != 3 &amp;&amp; alphaScale &gt; 0
+{
+    minorDie = 1;
+}
+
+if minorDie == 1 &amp;&amp; alphaScale &gt; 0
+{
+    alphaScale -= 0.01;
+}
+
+if minorDie == 1 &amp;&amp; alphaScale == 0
+{
+    instance_destroy();
+}
+
+if global.eventGoing = 1
+{
+    minorDie = 1;
+}
+
+//show_debug_message(timer);
 
 
 
